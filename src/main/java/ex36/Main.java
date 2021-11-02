@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class Main {
 
-    private static double  calculateAverage(List<Integer> array) {
+    public static double  calculateAverage(List<Integer> array) {
         Integer sum = 0;
         if(!array.isEmpty()) {
             for (int mark : array) {
@@ -24,7 +24,7 @@ public class Main {
         return sum;
     }
 
-    private static double max(List<Integer> array)
+    public static double max(List<Integer> array)
     {
         int maximum = array.get(0);
 
@@ -35,7 +35,7 @@ public class Main {
         return maximum;
     }
 
-    private static double min(List<Integer> array)
+    public static double min(List<Integer> array)
     {
         int minimum= array.get(0);
 
@@ -46,7 +46,7 @@ public class Main {
         return minimum;
     }
 
-    private static double stdD(List<Integer> array)
+    public static double stdD(List<Integer> array)
     {
         double deviation= array.get(0);
         double sum= 0.0;

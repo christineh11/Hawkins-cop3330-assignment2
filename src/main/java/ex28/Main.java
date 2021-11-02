@@ -12,7 +12,7 @@ import org.junit.Test;
 
 public class Main {
 
-    public static void total()
+    public static int total()
     {
         Scanner input= new Scanner(System.in);
         int number =0;
@@ -22,6 +22,7 @@ public class Main {
             number+=input.nextInt();
         }
         System.out.println("The total is: " +number);
+        return number;
 
     }
 

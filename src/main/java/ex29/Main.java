@@ -2,7 +2,6 @@ package ex29;
 
 
 import java.util.Scanner;
-import org.junit.Test;
 
 
 /*
@@ -14,7 +13,7 @@ import org.junit.Test;
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static double main(String args) {
 
 
         Scanner input = new Scanner(System.in);
@@ -37,6 +36,7 @@ public class Main {
                 }
             }
 
-        }
+        return 0;
+    }
     }
 

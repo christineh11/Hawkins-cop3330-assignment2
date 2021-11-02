@@ -17,13 +17,15 @@ public class Records {
         this.separationdate=separationdate;
     }
 
-    public void setFirstName(String FirstName)
+    public String setFirstName(String FirstName)
     {
+
         this.Firstname = Firstname;
+        return FirstName;
     }
 
 
-    public String getFirstName()
+    public  String getFirstName()
     {
         return Firstname;
     }

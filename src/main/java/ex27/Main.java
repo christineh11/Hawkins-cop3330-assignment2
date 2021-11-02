@@ -1,7 +1,5 @@
 package ex27;
 
-import org.junit.Test;
-
 import java.util.Scanner;
 
 
@@ -12,41 +10,48 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void Validateinput(String first, String last)
+    public static boolean Validateinput(String first, String last)
     {
 
         int n = first.length();
         if ( first.isEmpty()) {
             System.out.println("The first name must be filled in.");
             System.out.println("The first name must be at least 2 characters long.");
+            return false;
         }
         else if(n<2)
             System.out.println("The first name must be at least 2 characters long.");
+
 
         int b = last.length();
         if ( last.isEmpty())
         {
             System.out.println("The last name must be filled in.");
-             System.out.println("The last name must be at least 2 characters long.");}
+             System.out.println("The last name must be at least 2 characters long.");
+             return false;
+        }
         else if(b<2)
             System.out.println("The last name must be at least 2 characters long.");
 
 
+        return true;
     }
 
 
-    public static void Validatezip(String zip) {
+    public static boolean Validatezip(String zip) {
         if (zip == null || zip.length() != 5) {
             System.out.println("The zipcode must be a 5 digit number");
+            return false;
         }
         for (int i = 0; i < zip.length(); i++) {
             char c = zip.charAt(i);
             if (Character.isLetter(c)) {
                 System.out.println("The zipcode must be a 5 digit number");
-                break;
+                return false;
 
             }
         }
+        return true;
     }
 
     public static boolean verifyID(String id) {

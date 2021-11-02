@@ -15,9 +15,10 @@ class PaymentCaluclator {
         this.p=p;
     }
 
-    public void calculateMonthsUntilPaidOff( double b, double i, double p) {
+    public static double calculateMonthsUntilPaidOff( double b, double i, double p) {
         // find daily rate
         double ii = i/(365*100);
+        double n;
 
         double temp = b/p;
         double temp1 = Math.pow((1+ii),30);
@@ -28,6 +29,7 @@ class PaymentCaluclator {
 
         System.out.printf("It will take you %1.0f months to pay off this card.%n", n);
 
+        return n;
 
     }
 

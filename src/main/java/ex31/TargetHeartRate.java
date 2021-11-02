@@ -6,6 +6,7 @@ public class TargetHeartRate {
     private double intensity;
 
 
+
     public void Heartrate( double age, double restingHr,double intensity)
     {
         this.age=age;
@@ -13,17 +14,18 @@ public class TargetHeartRate {
         this.intensity=intensity;
     }
 
-    public void RateCalculator( double age, double restingHR) {
+    public static double RateCalculator(double age, double restingHR) {
         // find THR
 
+        double THR = 0;
         System.out.println("Intensity |\tRate");
         System.out.println("----------|---------");
         for(int intensity = 55 ; intensity <= 95 ; intensity += 5) {
-            double THR= (((220-age)-restingHR)*intensity/100)+restingHR;
+             THR= (((220-age)-restingHR)*intensity/100)+restingHR;
            System.out.println(intensity+"%\t\t  | "+Math.round(THR)+" bpm");
         }
 
-
+        return Math.round(THR);
     }
 
 
